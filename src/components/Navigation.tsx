@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Music } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logo from '../logo.png';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,15 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14 sm:h-16">
           <div className="flex items-center">
-            <Music className="h-6 w-6 sm:h-8 sm:w-8 text-purple-600 mr-2" />
+            <img 
+              src={logo} 
+              alt="AA Music Logo" 
+              className="h-24 w-24 sm:h-20 sm:w-20 mr-4 object-contain bg-transparent"
+              style={{ 
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+                mixBlendMode: 'multiply'
+              }}
+            />
             <span className="font-bold text-lg sm:text-xl text-white">
               <span className="hidden sm:inline">AA Music Distribution</span>
               <span className="sm:hidden">AA Music</span>
