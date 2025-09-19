@@ -4,30 +4,33 @@ import { ArrowLeft, Music, Headphones, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import asadImage from '../asad.png';
+import adeelImage from '../adeel.jpg';
+import saadImage from '../saad.jpg';
 
 const Teams: React.FC = () => {
   const teamMembers = [
     {
       id: 1,
-      name: 'Alex Johnson',
+      name: 'Asad Chaudhary',
       title: 'CEO & Founder',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face',
+      image: asadImage,
       description: 'Visionary leader with 15+ years in music industry',
       icon: <Music className="w-6 h-6" />
     },
     {
       id: 2,
-      name: 'Sarah Chen',
+      name: 'Muhammad Adeel',
       title: 'Head of Distribution',
-      image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
+      image: adeelImage,
       description: 'Expert in global music distribution and platform partnerships',
       icon: <Headphones className="w-6 h-6" />
     },
     {
       id: 3,
-      name: 'Marcus Rodriguez',
+      name: 'Saad Chaudhary',
       title: 'Creative Director',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
+      image: saadImage,
       description: 'Award-winning producer and creative strategist',
       icon: <Mic className="w-6 h-6" />
     }
