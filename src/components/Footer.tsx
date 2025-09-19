@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
       links: [
         { name: 'About Us', href: '#' },
         { name: 'Careers', href: '#' },
-        { name: 'Blog', href: '#' },
+        { name: 'Teams', href: '/teams' },
         { name: 'Press', href: '#' },
       ],
     },
@@ -101,12 +101,21 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-white transition-colors duration-200"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith('/') ? (
+                      <Link
+                        to={link.href}
+                        className="text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={link.href}
+                        className="text-gray-400 hover:text-white transition-colors duration-200"
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
