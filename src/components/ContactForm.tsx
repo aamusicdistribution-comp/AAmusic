@@ -102,7 +102,7 @@ const ContactForm: React.FC = () => {
                 </div>
                 <div className="min-w-0">
                   <p className="font-semibold text-white text-sm sm:text-base">Email</p>
-                  <p className="text-gray-300 text-sm sm:text-base break-all">aamusicdistribution@gmail.com
+                  <p className="text-gray-300 text-sm sm:text-base break-all">asad@aamusicdistribution.com
                   </p>
                 </div>
               </div>
