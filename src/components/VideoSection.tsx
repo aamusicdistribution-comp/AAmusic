@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Play } from 'lucide-react';
 
 const VideoSection: React.FC = () => {
   const [ref, inView] = useInView({
@@ -55,22 +54,17 @@ const VideoSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 p-1 rounded-2xl">
-              <div 
-                className="bg-gray-800 rounded-xl aspect-video flex items-center justify-center group cursor-pointer hover:bg-gray-700 transition-colors duration-300"
-                style={{
-                  backgroundImage: 'url("https://images.pexels.com/photos/1047442/pexels-photo-1047442.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className="absolute inset-0 bg-black/40 rounded-xl"></div>
-                <motion.div
-                  className="relative z-10 bg-white/20 backdrop-blur-sm rounded-full p-6 group-hover:bg-white/30 transition-colors duration-300"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+              <div className="bg-gray-800 rounded-xl aspect-video overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 >
-                  <Play size={48} className="text-white ml-1" />
-                </motion.div>
+                  <source src="/src/sample.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
 
