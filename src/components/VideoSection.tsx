@@ -61,9 +61,13 @@ const VideoSection: React.FC = () => {
                   loop
                   muted
                   playsInline
+                  preload="metadata"
+                  poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23111111'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' fill='white' font-family='Arial' font-size='48'%3ELoading Video...%3C/text%3E%3C/svg%3E"
                 >
-                  <source src="/src/sample.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
+                  <source src="/sample.mp4" type="video/mp4" />
+                  <div className="flex items-center justify-center h-full bg-gray-800 text-white">
+                    <p>Video not supported. Please check your internet connection.</p>
+                  </div>
                 </video>
               </div>
             </div>
