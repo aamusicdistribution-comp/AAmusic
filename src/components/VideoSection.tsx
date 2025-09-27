@@ -107,15 +107,15 @@ const VideoSection: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div>
-              <div className="text-3xl font-bold text-white mb-2">500k</div>
+              <div className="text-3xl font-bold text-white mb-2">500k+</div>
               <div className="text-gray-400">Tracks Distributed</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">10k</div>
+              <div className="text-3xl font-bold text-white mb-2">10k+</div>
               <div className="text-gray-400">Active Artists</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-white mb-2">$4M</div>
+              <div className="text-3xl font-bold text-white mb-2">$4M+</div>
               <div className="text-gray-400">Royalties Paid</div>
             </div>
           </motion.div>
